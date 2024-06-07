@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine On
+ 
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^updates/([0-9]+)/([0-9]+)/([0-9]+)/([^\/]+)$ ./viewupdate.php?year=$1&month=$2&date=$3&id=$4 [L]
+
+RewriteEngine On 
+
+RedirectMatch 301 /online-booking-in-bangalore.php /online-cab-booking-in-bangalore.php
